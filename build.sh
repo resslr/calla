@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 url=`cat ./.git/config | grep "url = " | sed "s/^[^=]*= //"`
-if [[ $url == "https://github.com/stardust-kyun/calla" ]]; then # make this case insensitive
+if [[ $url == "https://github.com/stardust-kyun/calla" || $$url == "https://github.com/stardust-kyun/calla.git"  ]]; then # make this case insensitive
 	read -p "
 Which distro would you like to build for?
 
